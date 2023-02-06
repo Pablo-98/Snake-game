@@ -87,12 +87,13 @@ public class gamePanel extends JPanel implements ActionListener {
 
     public void newApple() {
         // the purpose of this method is to generate the coordinates for a new apple
-        // when called
+        // x and y coords of apple
         appleX = random.nextInt((int) (SCREEN_WIDTH / UNIT_SIZE)) * UNIT_SIZE;
         appleY = random.nextInt((int) (SCREEN_HEIGHT / UNIT_SIZE)) * UNIT_SIZE;
 
     }
 
+    
     public void move() {
         // moving snake in this method
         for (int i = bodyParts; i > 0; i--) {
@@ -155,7 +156,7 @@ public class gamePanel extends JPanel implements ActionListener {
             running = false;
         }
 
-        if (running = false) {
+        if (!running) {
             timer.stop();
         }
 
